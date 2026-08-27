@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Vesper — Changelog</title>
+  <link rel="icon" href="./assets/app_icon.png"/>
+  <link rel="stylesheet" href="./assets/style.css"/>
+  <style>
+    .prose{max-width:760px; margin:0 auto; padding:32px 24px 72px}
+    .prose h1{font-size:36px; margin:12px 0 8px}
+    .back{display:inline-flex; gap:8px; align-items:center; margin-bottom:18px}
+  </style>
+</head>
+<body>
+<header class="header">
+  <div class="container header-inner">
+    <a class="brand" href="./"><img src="./assets/app_icon.png" alt=""/> VESPER</a>
+    <nav class="nav" id="nav">
+      <a href="./#features">Features</a>
+      <a href="./#download">Download</a>
+      <a href="./changelog.html" style="color:var(--text)">Changelog</a>
+      <a href="./privacy.html">Privacy</a>
+      <a href="./terms.html">Terms</a>
+      <a href="https://github.com/R766746/NovaIptv" target="_blank">GitHub</a>
+    </nav>
+    <button class="mobile-toggle" onclick="document.getElementById('nav').classList.toggle('open')">Menu</button>
+  </div>
+</header>
+
+<div class="prose">
+  <a class="back small" href="./">← Back to home</a>
+  <div class="kicker">Changelog • com.nova.iptv</div>
+  <h1>Changelog</h1>
+  <p class="muted">All notable changes to Vesper. APKs are published via GitHub Releases when you push a tag <code>v*</code>. This site auto-links to <code>https://github.com/R766746/NovaIptv/releases/latest</code>.</p>
+
+  <div class="changelog" style="margin-top:28px">
+
+    <div class="changelog-entry">
+      <h3>v1.0.0 — Initial public release</h3>
+      <div class="date">25 August 2026 • versionCode 1 • targetSdk 35</div>
+      <ul>
+        <li>Single-activity Compose + androidx.tv + Media3 ExoPlayer + Hilt + Room + DataStore</li>
+        <li>TiviMate-style three-pane Home (categories · groups · channels/posters)</li>
+        <li>Full-screen EPG grid, catch-up / archive, timeshift</li>
+        <li>M3U URL / local file / Xtream Codes import with streaming parser</li>
+        <li>Movies, series, detail, continue watching, favorites, search</li>
+        <li>2 / 4 / 9 multi-view with PlayerBudget decoder limit (1 fullscreen + 1 preview OR N multi-view)</li>
+        <li>Local PVR: optional recording via SAF folder, one at a time, no transcode</li>
+        <li>Parental PIN (salted hash), backup/restore, four themes (dusk #08070C + champagne gold #C9A36A)</li>
+        <li>First launch is Add Playlist only — no sample streams shipped</li>
+        <li>Privacy: Keystore-backed vault for portal password, no account system, no crash reporter in v1, Android Auto Backup disabled for DB</li>
+        <li>Website: new GitHub Pages site at <code>r766746.github.io/NovaIptv</code> with direct APK download, privacy, terms, changelog</li>
+        <li>CI: GitHub Actions workflows for Pages deploy and APK build+release (auto-build on tag)</li>
+      </ul>
+      <div style="margin-top:12px" class="small muted">
+        Download: <a href="https://github.com/R766746/NovaIptv/releases/latest">github.com/R766746/NovaIptv/releases/latest</a><br/>
+        Install: <code>adb install -r app-release.apk</code> or via Downloader app on TV.
+      </div>
+    </div>
+
+    <div class="changelog-entry">
+      <h3>v0.9.0 — Internal beta (pre-release)</h3>
+      <div class="date">August 2026 • internal</div>
+      <ul>
+        <li>Baseline profiles, R8 minify, performance tuning for low-RAM sticks</li>
+        <li>Player: Media3 HLS/DASH, OkHttp datasource, leanback UI</li>
+        <li>EPG matcher, XMLTV parser, Xtream EPG integration</li>
+        <li>QA: Search reachable with Up after content focused (fix ac87f0e)</li>
+        <li>Store assets: app_icon, feature graphic, TV banner, 4 screenshots</li>
+        <li>Docs: initial privacy.html & terms.html placeholders</li>
+      </ul>
+    </div>
+
+    <div class="changelog-entry">
+      <h3>How versioning works</h3>
+      <div class="date">Continuous</div>
+      <ul>
+        <li>Versioning: Semantic — <code>vMAJOR.MINOR.PATCH</code> tags trigger release builds</li>
+        <li>Build: <code>./gradlew :app:assembleRelease :app:assembleDebug</code> via Actions</li>
+        <li>Signing: If secrets <code>KEYSTORE_BASE64, KEYSTORE_PASSWORD, KEY_ALIAS, KEY_PASSWORD</code> are set, release APK is signed with your keystore. Otherwise CI falls back to debug keystore (installable but you should set secrets for consistent updates)</li>
+        <li>Pages: <code>docs/</code> folder deployed to GitHub Pages via <code>actions/deploy-pages</code></li>
+        <li>Next: Play Store listing, optional auto-updater in-app</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div style="margin-top:32px" class="code-box">
+    <b>For maintainers — create a release:</b><br/>
+    <code>
+      git tag v1.0.0<br/>
+      git push origin v1.0.0<br/>
+      # Actions builds APKs and creates GitHub Release with APKs attached
+    </code>
+    <div style="margin-top:10px" class="small muted">Or run workflow manually: GitHub → Actions → Build APK and Release → Run workflow.</div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="copy" style="margin-top:0">
+      <span>© 2026 Vesper • <a href="./">Home</a> • <a href="./privacy.html">Privacy</a> • <a href="./terms.html">Terms</a></span>
+      <span><a href="mailto:vesper_player@proton.me">vesper_player@proton.me</a></span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

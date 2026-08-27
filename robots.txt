@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://r766746.github.io/NovaIptv/sitemap.xml

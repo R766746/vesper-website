@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Vesper — Privacy policy</title>
+  <meta name="description" content="Vesper IPTV Player privacy policy — data stays on device, no account system."/>
+  <link rel="icon" href="./assets/app_icon.png"/>
+  <link rel="stylesheet" href="./assets/style.css"/>
+  <style>
+    .prose{max-width:760px; margin:0 auto; padding:32px 24px 72px}
+    .prose h1{font-size:36px; margin:12px 0 8px}
+    .prose h2{font-size:20px; margin:28px 0 10px}
+    .prose p, .prose li{color:#C8C2B6; font-size:15px}
+    .prose ul{padding-left:20px}
+    .prose .muted{color:#9A9286}
+    .back{display:inline-flex; gap:8px; align-items:center; margin-bottom:18px}
+  </style>
+</head>
+<body>
+<header class="header">
+  <div class="container header-inner">
+    <a class="brand" href="./"><img src="./assets/app_icon.png" alt=""/> VESPER</a>
+    <nav class="nav" id="nav">
+      <a href="./#features">Features</a>
+      <a href="./#download">Download</a>
+      <a href="./changelog.html">Changelog</a>
+      <a href="./privacy.html" style="color:var(--text)">Privacy</a>
+      <a href="./terms.html">Terms</a>
+      <a href="https://github.com/R766746/NovaIptv" target="_blank">GitHub</a>
+    </nav>
+    <button class="mobile-toggle" onclick="document.getElementById('nav').classList.toggle('open')">Menu</button>
+  </div>
+</header>
+
+<div class="prose">
+  <a class="back small" href="./">← Back to home</a>
+  <div class="kicker">Privacy • last updated 25 August 2026</div>
+  <h1>Privacy policy</h1>
+  <p class="muted">Vesper (package <code>com.nova.iptv</code>) • Contact: <a href="mailto:vesper_player@proton.me">vesper_player@proton.me</a></p>
+
+  <p><strong>This is not legal advice.</strong> Vesper is a media <em>player</em>. It does not provide, host, sell, or recommend television channels, playlists, or VOD.</p>
+
+  <h2>Who we are</h2>
+  <p>The publisher of the Android TV app Vesper, application id <code>com.nova.iptv</code>. Contact: <a href="mailto:vesper_player@proton.me">vesper_player@proton.me</a>. This site is hosted via GitHub Pages at <code>r766746.github.io/NovaIptv</code>.</p>
+
+  <h2>What stays on your TV</h2>
+  <ul>
+    <li>Playlist URLs, Xtream usernames, and related settings you enter.</li>
+    <li>The portal password, stored in Android Keystore-backed EncryptedSharedPreferences when the device allows it.</li>
+    <li>M3U stream URLs exactly as you paste them (they may include provider tokens).</li>
+    <li>Parental PIN as a salted hash (a household lock, not strong cryptography).</li>
+    <li>Watch history, favorites, EPG cache, and optional recordings you choose to keep.</li>
+    <li>Optional OpenSubtitles username and API keys you type in Settings.</li>
+    <li>App preferences via Jetpack DataStore.</li>
+  </ul>
+  <p>We do not run an account system. We do not receive your playlists. We do not run analytics in v1.</p>
+
+  <h2>What leaves the device</h2>
+  <p>Network traffic goes to:</p>
+  <ul>
+    <li><strong>Hosts you configure</strong> — your IPTV / Xtream / EPG / stream servers, including credentials those URLs contain. If your provider uses HTTP, that traffic is not encrypted (disclosed in Data Safety).</li>
+    <li><strong>Optional metadata services</strong> you can leave unused: TMDB, Apple iTunes Search, Wikipedia, TVMaze, OMDb (if you add a key), OpenSubtitles, and YouTube (trailers via official IFrame or YouTube app). Those lookups send titles, TMDB ids, and your IP address to those operators under <em>their</em> policies.</li>
+  </ul>
+  <p>There is no crash reporter in v1. No ads. No in-app purchases.</p>
+
+  <h2>Website (this GitHub Pages site)</h2>
+  <ul>
+    <li>This site is static HTML/CSS. No cookies set by us.</li>
+    <li>GitHub Pages may collect logs per GitHub's privacy statement.</li>
+    <li>The download page fetches <code>api.github.com/repos/R766746/NovaIptv/releases/latest</code> client-side to show the latest APK link — that's a request to GitHub's API.</li>
+  </ul>
+
+  <h2>Recordings and backup</h2>
+  <p>Optional recordings and file backups use storage you pick (app-private folder or a SAF folder you grant). In-app backup export omits passwords by default (you can opt-in). Android Auto Backup of the Room library and DataStore is disabled to avoid leaking tokens to Google Drive.</p>
+
+  <h2>Children</h2>
+  <p>Vesper is a general-audience player. The PIN is a household lock, not a children’s privacy mechanism. No child-directed data collection.</p>
+
+  <h2>Security</h2>
+  <ul>
+    <li>Encrypted in transit: HTTPS to TMDB, iTunes, Wikipedia, TVMaze, OMDb, OpenSubtitles, YouTube.</li>
+    <li>Your IPTV hosts may be HTTP — that is controlled by your provider, not Vesper.</li>
+    <li>Keystore-backed vault for passwords where device supports it.</li>
+  </ul>
+
+  <h2>Deletion</h2>
+  <p>Uninstall the app, or delete a playlist in Settings, to remove that library from the device. Recordings in a folder you picked stay until you delete them via file manager. No server copy exists to delete — we don't have your data.</p>
+
+  <h2>Data Safety (Play Console summary)</h2>
+  <p>Matches <a href="https://github.com/R766746/NovaIptv/blob/main/store/DATA_SAFETY.md">store/DATA_SAFETY.md</a>. No data collected by developer; data stored on device is sent to user-configured provider when playing/importing. Optional third-party sharing for artwork/trailers/subtitles as listed above.</p>
+
+  <h2>Changes</h2>
+  <p>We will date this page when the policy changes. Keep using the app only if you accept the current version. For questions: <a href="mailto:vesper_player@proton.me">vesper_player@proton.me</a></p>
+
+  <div style="margin-top:32px; padding-top:20px; border-top:1px solid var(--border)" class="small muted">
+    Vesper is a player only and does not provide IPTV content. You are responsible for every stream URL you add.
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="copy" style="margin-top:0">
+      <span>© 2026 Vesper • <a href="./">Home</a> • <a href="./terms.html">Terms</a> • <a href="./changelog.html">Changelog</a></span>
+      <span><a href="mailto:vesper_player@proton.me">vesper_player@proton.me</a></span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
