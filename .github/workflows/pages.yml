@@ -13,7 +13,25 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 jobs:
+  dispatch-release:
+    if: github.event_name == 'release'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      actions: write
+      contents: read
+    steps:
+      - name: Dispatch Pages deployment from main
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api \
+            --method POST \
+            repos/${{ github.repository }}/actions/workflows/pages.yml/dispatches \
+            -f ref=main
+
   build:
+    if: github.event_name != 'release'
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -50,6 +68,7 @@ jobs:
         with:
           path: .
   deploy:
+    if: github.event_name != 'release'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
