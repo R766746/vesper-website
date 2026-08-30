@@ -50,23 +50,6 @@ img{max-width:100%; display:block}
 .btn-primary{
   background:var(--gold); color:#121017; border-color:var(--gold);
   box-shadow:0 8px 24px rgba(201,163,106,0.25);
-
-/* Skip link for accessibility */
-.skip-link {
-  position: absolute;
-  left: -999px;
-  top: auto;
-  background: var(--bg);
-  color: var(--text);
-  padding: 8px 12px;
-  z-index: 1000;
-  border: 1px solid var(--border);
-  border-radius: 4px;
-}
-.skip-link:focus {
-  left: 16px;
-}
-
 }
 .btn:focus-visible,
 a:focus-visible,
