@@ -15,11 +15,15 @@ Public website and APK download page for **Vesper**, a 10-foot IPTV player for A
 
 APKs are built, signed, tested, and uploaded **manually**. This repository does not pull builds from the private Android repository.
 
-The website's download button reads this public repository's latest GitHub Release. Every release must contain a verified asset named exactly `app-release.apk`; this keeps the stable direct-download URL working:
+The website reads a reduced `latest-release.json` manifest generated during deployment and compares it with GitHub's public latest-release API. Publishing, editing, or deleting a release automatically redeploys the manifest.
+
+Every stable release must contain exactly one verified production APK named `app-release.apk` and its checksum named `SHA256SUMS.txt`. Do not publish debug APKs. The fixed APK filename keeps the stable direct-download URL working:
 
 `https://github.com/R766746/vesper-website/releases/latest/download/app-release.apk`
 
 Follow [RELEASE_CHECKLIST.md](./RELEASE_CHECKLIST.md) for every upload.
+
+The HTML pages include a restrictive CSP and referrer policy through `<meta>` elements. GitHub Pages does not apply Netlify-style `_headers` files; use a reverse proxy or a host with configurable response headers if HTTP-level CSP, frame, and content-type headers become a requirement.
 
 ## GitHub Pages
 

@@ -4,37 +4,37 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Vesper — Changelog</title>
+  <meta name="description" content="Release history and notable changes for the Vesper Android TV player."/>
+  <meta name="referrer" content="strict-origin-when-cross-origin"/>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; script-src 'self'; style-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests"/>
+  <link rel="canonical" href="https://r766746.github.io/vesper-website/changelog.html"/>
   <link rel="icon" href="./assets/app_icon.png"/>
   <link rel="stylesheet" href="./assets/style.css"/>
-  <style>
-    .prose{max-width:760px; margin:0 auto; padding:32px 24px 72px}
-    .prose h1{font-size:36px; margin:12px 0 8px}
-    .back{display:inline-flex; gap:8px; align-items:center; margin-bottom:18px}
-  </style>
 </head>
 <body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
 <header class="header">
   <div class="container header-inner">
-    <a class="brand" href="./"><img src="./assets/app_icon.png" alt=""/> VESPER</a>
-    <nav class="nav" id="nav">
+    <a class="brand" href="./" aria-label="Vesper home"><img src="./assets/app_icon.png" width="512" height="512" alt=""/> VESPER</a>
+    <nav class="nav" id="nav" aria-label="Primary navigation">
       <a href="./#features">Features</a>
       <a href="./#download">Download</a>
-      <a href="./changelog.html" style="color:var(--text)">Changelog</a>
+      <a href="./changelog.html" class="current-link" aria-current="page">Changelog</a>
       <a href="./privacy.html">Privacy</a>
       <a href="./terms.html">Terms</a>
-      <a href="https://github.com/R766746/vesper-website" target="_blank">GitHub</a>
+      <a href="https://github.com/R766746/vesper-website" target="_blank" rel="noopener noreferrer">GitHub</a>
     </nav>
-    <button class="mobile-toggle" onclick="document.getElementById('nav').classList.toggle('open')">Menu</button>
+    <button class="mobile-toggle" type="button" aria-label="Open navigation" aria-controls="nav" aria-expanded="false">Menu</button>
   </div>
 </header>
 
-<div class="prose">
+<main id="main-content" class="prose">
   <a class="back small" href="./">← Back to home</a>
   <div class="kicker">Changelog • com.nova.iptv</div>
   <h1>Changelog</h1>
   <p class="muted">All notable changes to Vesper. Verified APKs are manually published in the public website repository. This site links to <code>https://github.com/R766746/vesper-website/releases/latest</code>.</p>
 
-  <div class="changelog" style="margin-top:28px">
+  <div class="changelog changelog-intro">
 
     <div class="changelog-entry">
       <h3>v1.0.1 — Withdrawn</h3>
@@ -55,7 +55,7 @@
         <li>Full-screen EPG grid, catch-up / archive, timeshift</li>
         <li>M3U URL / local file / Xtream Codes import with streaming parser</li>
         <li>Movies, series, detail, continue watching, favorites, search</li>
-        <li>2 / 4 / 9 multi-view with PlayerBudget decoder limit (1 fullscreen + 1 preview OR N multi-view)</li>
+        <li>2 / 4 multi-view with a device-aware decoder budget</li>
         <li>Local PVR: optional recording via SAF folder, one at a time, no transcode</li>
         <li>Parental PIN (salted hash), backup/restore, four themes (dusk #08070C + champagne gold #C9A36A)</li>
         <li>First launch is Add Playlist only — no sample streams shipped</li>
@@ -63,10 +63,7 @@
         <li>Website: GitHub Pages site at <code>r766746.github.io/vesper-website</code> with direct APK download, privacy, terms, and changelog</li>
         <li>Release process: signed APKs are checked and uploaded manually to the public website repository</li>
       </ul>
-      <div style="margin-top:12px" class="small muted">
-        Download: <a href="https://github.com/R766746/vesper-website/releases/latest">github.com/R766746/vesper-website/releases/latest</a><br/>
-        Install: <code>adb install -r app-release.apk</code> or via Downloader app on TV.
-      </div>
+      <div class="install-note small muted">Download withdrawn. Install only a newer release that passes the verification checklist.</div>
     </div>
 
     <div class="changelog-entry">
@@ -78,7 +75,7 @@
         <li>EPG matcher, XMLTV parser, Xtream EPG integration</li>
         <li>QA: Search reachable with Up after content focused (fix ac87f0e)</li>
         <li>Store assets: app_icon, feature graphic, TV banner, 4 screenshots</li>
-        <li>Docs: initial privacy.html & terms.html placeholders</li>
+        <li>Docs: initial privacy.html &amp; terms.html placeholders</li>
       </ul>
     </div>
 
@@ -96,19 +93,20 @@
 
   </div>
 
-  <div style="margin-top:32px" class="code-box">
+  <div class="code-box release-integrity">
     <b>Release integrity:</b><br/>
-    <div style="margin-top:10px" class="small muted">The maintainer verifies the app label, version, signature, and SHA256 checksum before manually attaching <code>app-release.apk</code> to a public GitHub Release.</div>
+    <div class="release-integrity-copy small muted">The maintainer verifies the app label, version, signature, and SHA-256 checksum before attaching <code>app-release.apk</code> to a public GitHub Release.</div>
   </div>
-</div>
+</main>
 
 <footer class="footer">
   <div class="container">
-    <div class="copy" style="margin-top:0">
+    <div class="copy compact">
       <span>© 2026 Vesper • <a href="./">Home</a> • <a href="./privacy.html">Privacy</a> • <a href="./terms.html">Terms</a></span>
       <span><a href="mailto:vesper_player@proton.me">vesper_player@proton.me</a></span>
     </div>
   </div>
 </footer>
+<script src="./assets/site.js" defer></script>
 </body>
 </html>

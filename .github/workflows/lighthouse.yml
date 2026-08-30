@@ -8,15 +8,13 @@ on:
 jobs:
   lhci:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
     steps:
       - uses: actions/checkout@v4
-      - name: Install Node & LHCI
-        run: |
-          sudo apt-get update && sudo apt-get install -y nodejs npm
-          npm install -g @lhci/cli@0.14.x
-      - name: Run LHCI collect & upload (optional)
-        env:
-          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
-        run: |
-          lhci collect --url http://localhost:8000 --config ./lhci.config.js || true
-          # The upload step can be added if a server is configured
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Run Lighthouse quality gates
+        run: npx --yes @lhci/cli@0.14.x autorun --config=./lhci.config.js

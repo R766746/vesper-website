@@ -3,24 +3,35 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Vesper — 10-foot IPTV Player for Android TV</title>
-  <meta name="description" content="Vesper is a 10-foot IPTV player for Android TV. Player only — does not provide channels, movies or series. M3U, Xtream, EPG, multi-view, recording."/>
+  <title>Vesper — IPTV Player for Android TV</title>
+  <meta name="description" content="Vesper is a privacy-first IPTV player for Android TV. Bring your own authorised M3U, local file, or Xtream-compatible service."/>
+  <meta name="referrer" content="strict-origin-when-cross-origin"/>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; script-src 'self'; style-src 'self'; connect-src 'self' https://api.github.com; base-uri 'self'; form-action 'none'; upgrade-insecure-requests"/>
+  <link rel="canonical" href="https://r766746.github.io/vesper-website/"/>
   <meta property="og:title" content="Vesper — IPTV Player for Android TV"/>
-  <meta property="og:description" content="A player. Not a provider. Home, EPG, catch-up, multi-view, local PVR."/>
-  <meta property="og:image" content="./assets/feature.png"/>
+  <meta property="og:description" content="A fast, privacy-first player built for the couch. Bring your own authorised sources."/>
+  <meta property="og:image" content="https://r766746.github.io/vesper-website/assets/feature.png"/>
+  <meta property="og:image:width" content="1024"/>
+  <meta property="og:image:height" content="500"/>
+  <meta property="og:url" content="https://r766746.github.io/vesper-website/"/>
   <meta property="og:type" content="website"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Vesper — IPTV Player for Android TV"/>
+  <meta name="twitter:description" content="A fast, privacy-first player built for the couch."/>
+  <meta name="twitter:image" content="https://r766746.github.io/vesper-website/assets/feature.png"/>
   <meta name="theme-color" content="#08070C"/>
   <link rel="icon" href="./assets/app_icon.png"/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/style.css"/>
+  <link rel="stylesheet" href="./assets/style.css"/>
 </head>
-<a href="#main-content" class="skip-link">Skip to main content</a>
 <body>
-<main id="main-content">
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
 <header class="header">
   <div class="container header-inner">
-    <a class="brand" href="./"><img src="./assets/app_icon.png" alt="Vesper icon"/> VESPER</a>
-    <nav class="nav" id="nav">
+    <a class="brand" href="./" aria-label="Vesper home">
+      <img src="./assets/app_icon.png" width="512" height="512" alt=""/> VESPER
+    </a>
+    <nav class="nav" id="nav" aria-label="Primary navigation">
       <a href="#features">Features</a>
       <a href="#screenshots">Screenshots</a>
       <a href="#download">Download</a>
@@ -28,118 +39,144 @@
       <a href="./privacy.html">Privacy</a>
       <a href="./terms.html">Terms</a>
       <a href="https://github.com/R766746/vesper-website" target="_blank" rel="noopener noreferrer">GitHub</a>
-      <a class="btn btn-primary" href="#download" style="padding:8px 16px">Get APK</a>
+      <a class="btn btn-primary nav-cta" href="#download">Get APK</a>
     </nav>
-    <button class="mobile-toggle" aria-label="Toggle navigation" onclick="document.getElementById('nav').classList.toggle('open')">Menu</button>
+    <button class="mobile-toggle" type="button" aria-label="Open navigation" aria-controls="nav" aria-expanded="false">Menu</button>
   </div>
 </header>
+
+<main id="main-content">
   <section class="hero">
     <div class="container hero-grid">
       <div>
-        <div class="kicker">● Android TV • Leanback • com.nova.iptv • Public site</div>
+        <div class="kicker">Android TV • D-pad native • Privacy first</div>
         <h1>VESPER <span>A player.<br/>Not a provider.</span></h1>
-        <p class="lead">The effortless 10-foot IPTV player for Android TV. It does not provide channels, movies, or series — you add your own M3U, local file, or Xtream portal. three-pane Home, full-screen EPG, catch-up, and local PVR.</p>
+        <p class="lead">A focused 10-foot player for Android TV. Add your own authorised M3U, local file, or Xtream-compatible service and enjoy fast navigation, EPG, catch-up, multi-view, and local recording.</p>
         <div class="hero-actions">
-          <a id="hero-dl" class="btn btn-primary btn-lg" href="#download" aria-disabled="true" style="pointer-events:none; opacity:.55">Download temporarily unavailable</a>
-          <a class="btn btn-ghost btn-lg" href="#features">Explore features</a>
+          <a id="hero-dl" class="btn btn-primary btn-lg is-disabled" aria-disabled="true" tabindex="-1">Verified APK coming soon</a>
+          <a class="btn btn-ghost btn-lg" href="#screenshots">See the experience</a>
         </div>
-        <div class="hero-meta"><span><strong>Release pending</strong> • minSdk 26 • target 35</span><span>• No account • Data stays on TV</span><span>• <span id="latest-version">Checking latest…</span></span></div>
-        <div style="margin-top:18px" class="small muted"><strong style="color:var(--gold)">IMPORTANT!</strong> Vesper is a media player only. This public repository hosts the website and manually verified APK releases; the Android source remains private.</div>
+        <div class="hero-meta">
+          <span>Android 8.0+</span>
+          <span>No account</span>
+          <span>No ads or in-app purchases</span>
+          <span id="latest-version" aria-live="polite">Checking release…</span>
+        </div>
+        <p class="hero-note"><strong>Player only.</strong> Vesper includes no channels, movies, series, playlists, or subscriptions.</p>
       </div>
-      <div class="hero-visual"><div class="badge-live">● Public Website • APKs via Releases</div><img src="./assets/feature.png" alt="Vesper feature graphic"/></div>
+      <div class="hero-visual">
+        <div class="badge-live">Designed for Android TV</div>
+        <img src="./screenshots/screenshot_03_settings.png" width="1920" height="1080" alt="Vesper appearance settings on Android TV" fetchpriority="high"/>
+      </div>
     </div>
   </section>
-  <div class="trust"><div class="container trust-inner"><span><strong>Player-only</strong> — no channels included</span><span>•</span><span><strong>Public site</strong> • Private app repo</span><span>•</span><span><strong>Privacy first</strong></span><span>•</span><span><strong>D-pad native</strong></span></div></div>
-  <section id="features" class="section"><div class="container"><div class="kicker">Why Vesper?</div><h2>Everything you expect from a premium TV player. Nothing you don't.</h2><p class="sub">Built for Android TV sticks and boxes with Compose + androidx.tv + Media3.</p><div class="grid-3">
-        <div class="card"><div class="icon">◫</div><h3>Three-pane Home</h3><p>Categories · Groups · Channels / Posters. D-pad native.</p></div>
-        <div class="card"><div class="icon">◧</div><h3>Full-screen EPG</h3><p>XMLTV & Xtream EPG grid, detail, search, catch-up.</p></div>
-        <div class="card"><div class="icon">◎</div><h3>Movies & Series</h3><p>Posters, continue watching, detail.</p></div>
-        <div class="card"><div class="icon">⧉</div><h3>2 / 4 / 9 Multi-view</h3><p>Hard decoder budget.</p></div>
-        <div class="card"><div class="icon">● Rec</div><h3>Local PVR</h3><p>Optional SAF recording.</p></div>
-        <div class="card"><div class="icon">◐</div><h3>Parental & Backup</h3><p>PIN, backup/restore, four themes.</p></div>
-        <div class="card"><div class="icon">⌕</div><h3>Search & Continue</h3><p>Global search, favorites.</p></div>
-        <div class="card"><div class="icon">⎆</div><h3>M3U / Xtream</h3><p>M3U URL, file, or Xtream portal.</p></div>
-        <div class="card"><div class="icon">⚡</div><h3>Low-RAM Tuned</h3><p>Baseline profiles, R8 minify.</p></div>
-      </div></div></section>
-  <section id="screenshots" class="section section-alt"><div class="container"><div class="kicker">Screenshots</div><h2>Designed for the couch, not the desk.</h2><p class="sub">Actual Android TV build.</p><div class="screens">
-        <div class="screen"><img src="./screenshots/screenshot_01_add_playlist.png" alt="Add playlist" loading="lazy"/><div class="cap"><b>Add Playlist</b><span>No sample streams</span></div></div>
-        <div class="screen"><img src="./screenshots/screenshot_02_empty_home.png" alt="Home" loading="lazy"/><div class="cap"><b>Three-pane Home</b><span>Categories · Groups</span></div></div>
-        <div class="screen"><img src="./screenshots/screenshot_03_settings.png" alt="Settings" loading="lazy"/><div class="cap"><b>Settings Rail</b><span>Player, EPG, PIN</span></div></div>
-        <div class="screen"><img src="./screenshots/screenshot_04_player.png" alt="Player" loading="lazy"/><div class="cap"><b>Player</b><span>ExoPlayer • Subtitles</span></div></div>
-      </div></div></section>
-  <section id="download" class="section"><div class="container"><div class="kicker">Download • Public repo</div><h2>Install Vesper on your Android TV</h2><p class="sub">APKs are hosted in this public repo's Releases.</p><div class="download-box"><div>
-          <h3>Get the latest APK</h3><p class="muted">Package <code>com.nova.iptv</code> • Version <span id="dl-version">pending</span></p>
-          <div class="dl-meta"><span>✓ No ads • No IAP</span><span>✓ Public APK hosting</span><span>✓ <a href="./changelog.html">Changelog</a></span></div>
-          <div class="dl-actions"><a id="dl-btn" class="btn btn-primary btn-lg" href="#download" aria-disabled="true" style="pointer-events:none; opacity:.55">Download temporarily unavailable</a><a class="btn btn-ghost" href="https://github.com/R766746/vesper-website/releases" target="_blank" rel="noopener noreferrer">Release history</a></div>
-          <div style="margin-top:18px" class="code-box"><div><b>Downloader app on TV:</b></div><div style="margin-top:8px">URL: <code>https://r766746.github.io/vesper-website/</code></div><div>Direct APK: <code id="direct-apk">Unavailable until a verified release is published</code></div></div>
-          <div style="margin-top:16px" class="small muted"><div id="release-notes">Fetching latest release info…</div></div>
-        </div><div><div class="code-box" style="background:var(--card)"><b>How to sideload:</b><ol style="margin:10px 0 0 18px; padding:0; line-height:1.7" class="muted"><li>TV Settings → Security → Unknown sources → Allow Downloader</li><li>Open Downloader, enter <code>r766746.github.io/vesper-website</code></li><li>Download APK → Install</li><li>Open Vesper → Add Playlist</li></ol><div style="margin-top:14px"><b>Update:</b> Install new APK over old — data stays if same signing key.</div><div style="margin-top:12px"><b>ADB:</b><br/><code>adb connect &lt;tv-ip&gt;<br/>adb install -r app-release.apk</code></div></div></div></div></div></section>
-  <section class="section section-alt"><div class="container"><div class="kicker">FAQ • Legal</div><h2>A player. Not a provider.</h2><div class="faq"><div class="faq-item"><h4>Does Vesper include channels?</h4><p>No. First launch is Add Playlist only.</p></div><div class="faq-item"><h4>Why two repos?</h4><p>The Android source is private. This public <code>vesper-website</code> repository hosts only the website and APK releases.</p></div><div class="faq-item"><h4>How are APKs published?</h4><p>Each signed Vesper APK is checked locally, then manually uploaded to this repository's GitHub Releases page.</p></div></div></div></section>
+
+  <div class="trust">
+    <div class="container trust-inner">
+      <span><strong>Your sources</strong> — you stay in control</span>
+      <span aria-hidden="true">•</span>
+      <span><strong>Local-first</strong> watch history and settings</span>
+      <span aria-hidden="true">•</span>
+      <span><strong>TV-native</strong> navigation</span>
+    </div>
+  </div>
+
+  <section id="features" class="section">
+    <div class="container">
+      <div class="kicker">Built for the couch</div>
+      <h2>The essentials, designed around a remote.</h2>
+      <p class="sub">A clean Android TV experience that stays out of the way of your content.</p>
+      <div class="grid-3">
+        <article class="card"><div class="icon" aria-hidden="true">▤</div><h3>Three-pane Home</h3><p>Move naturally between media types, groups, channels, and posters.</p></article>
+        <article class="card"><div class="icon" aria-hidden="true">▦</div><h3>Full-screen EPG</h3><p>Browse programme details, search the guide, and open provider catch-up.</p></article>
+        <article class="card"><div class="icon" aria-hidden="true">▶</div><h3>Movies &amp; series</h3><p>Poster browsing, details, favourites, and continue watching.</p></article>
+        <article class="card"><div class="icon" aria-hidden="true">⊞</div><h3>2 / 4 multi-view</h3><p>Watch multiple live sources with a device-aware decoder budget.</p></article>
+        <article class="card"><div class="icon" aria-hidden="true">●</div><h3>Local recording</h3><p>Save an authorised live stream to storage you choose.</p></article>
+        <article class="card"><div class="icon" aria-hidden="true">◇</div><h3>Privacy first</h3><p>No developer account, analytics, advertising, or cloud watch-history service.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="screenshots" class="section section-alt">
+    <div class="container">
+      <div class="kicker">Actual app screens</div>
+      <h2>Readable from across the room.</h2>
+      <p class="sub">Large focus targets, clear hierarchy, and deliberate remote navigation.</p>
+      <div class="screens">
+        <figure class="screen"><img src="./screenshots/screenshot_01_add_playlist.png" width="1920" height="1080" alt="Vesper Add Playlist screen" loading="lazy" decoding="async"/><figcaption class="cap"><b>Add a source</b><span>M3U • Local file • Xtream</span></figcaption></figure>
+        <figure class="screen"><img src="./screenshots/screenshot_02_empty_home.png" width="1920" height="1080" alt="Vesper three-pane Home screen" loading="lazy" decoding="async"/><figcaption class="cap"><b>Three-pane Home</b><span>Media • Groups • Content</span></figcaption></figure>
+        <figure class="screen"><img src="./screenshots/screenshot_03_settings.png" width="1920" height="1080" alt="Vesper appearance settings screen" loading="lazy" decoding="async"/><figcaption class="cap"><b>Appearance</b><span>TV-friendly themes</span></figcaption></figure>
+        <figure class="screen"><img src="./screenshots/screenshot_04_player.png" width="1920" height="1080" alt="Vesper live player controls" loading="lazy" decoding="async"/><figcaption class="cap"><b>Player</b><span>Tracks • Subtitles • Display modes</span></figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="download" class="section">
+    <div class="container">
+      <div class="kicker">Verified download</div>
+      <h2>Install Vesper on Android TV</h2>
+      <p class="sub">Production APKs and checksums are published through the official Vesper GitHub Releases page.</p>
+      <div class="download-box">
+        <div>
+          <h3>Get the latest signed APK</h3>
+          <p class="muted">Package <code>com.nova.iptv</code> • Version <span id="dl-version">pending</span></p>
+          <div class="dl-meta"><span>✓ Production-signed</span><span>✓ SHA-256 checksum</span><span>✓ <a href="./changelog.html">Release notes</a></span></div>
+          <div class="dl-actions">
+            <a id="dl-btn" class="btn btn-primary btn-lg is-disabled" aria-disabled="true" tabindex="-1">Verified APK coming soon</a>
+            <a id="release-history-link" class="btn btn-ghost" href="./changelog.html">Release status</a>
+          </div>
+          <div class="code-box download-details">
+            <div><b>Downloader app on TV</b></div>
+            <div class="detail-row">Site: <code>r766746.github.io/vesper-website</code></div>
+            <div>Direct APK: <code id="direct-apk">Available after verification</code></div>
+            <div>Checksum: <code id="checksum-link">Published with the APK</code></div>
+          </div>
+          <div id="release-notes" class="small muted release-status" aria-live="polite">Checking verified release information…</div>
+        </div>
+        <div class="code-box install-box">
+          <b>How to sideload</b>
+          <ol class="install-steps muted">
+            <li>Allow installs from your trusted Downloader or file-manager app.</li>
+            <li>Open this site on the TV and download the production APK.</li>
+            <li>Optionally compare its SHA-256 value with the published checksum.</li>
+            <li>Install, open Vesper, and add your authorised source.</li>
+          </ol>
+          <div class="install-note"><b>Updates:</b> Install the new APK over the old version. Your data stays when the package and signing certificate match.</div>
+          <div class="install-note"><b>ADB:</b><br/><code>adb install -r app-release.apk</code></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <div class="kicker">FAQ • Legal</div>
+      <h2>A player. Not a content service.</h2>
+      <div class="faq">
+        <article class="faq-item"><h3>Does Vesper include channels?</h3><p>No. First launch asks you to add your own authorised source.</p></article>
+        <article class="faq-item"><h3>Where is my information stored?</h3><p>Playlist configuration, settings, favourites, and watch history remain on your Android TV unless a feature must contact your provider or an optional metadata service.</p></article>
+        <article class="faq-item"><h3>How are downloads verified?</h3><p>Every public APK is checked for package, version, production signature, and SHA-256 checksum before publication.</p></article>
+      </div>
+    </div>
+  </section>
 </main>
-<footer class="footer"><div class="container"><div class="footer-grid"><div><div class="brand"><img src="./assets/app_icon.png" alt=""/> VESPER</div><p class="muted small">10-foot IPTV player for Android TV.<br/>A player. Not a provider.<br/>com.nova.iptv</p><p class="small muted" style="margin-top:12px">Contact: <a href="mailto:vesper_player@proton.me">vesper_player@proton.me</a></p></div><div><h5>Product</h5><a href="#features">Features</a><a href="#screenshots">Screenshots</a><a href="#download">Download</a><a href="./changelog.html">Changelog</a></div><div><h5>Legal</h5><a href="./privacy.html">Privacy</a><a href="./terms.html">Terms</a></div><div><h5>Public site repo</h5><a href="https://github.com/R766746/vesper-website/issues" target="_blank" rel="noopener noreferrer">Issues</a><a href="https://github.com/R766746/vesper-website/releases" target="_blank" rel="noopener noreferrer">Releases</a><a href="https://github.com/R766746/vesper-website/actions" target="_blank" rel="noopener noreferrer">Actions</a></div></div><div class="copy"><span>© 2026 Vesper • Public site: r766746.github.io/vesper-website</span></div></div></footer>
-<script>
-(async () => {
-  const repo = "R766746/vesper-website";
-  const api = `https://api.github.com/repos/${repo}/releases/latest`;
-  const blockedTags = new Set(["v1.0.0", "v1.0.1"]);
-  const dlBtn = document.getElementById('dl-btn');
-  const heroDl = document.getElementById('hero-dl');
-  const verEl = document.getElementById('latest-version');
-  const dlVer = document.getElementById('dl-version');
-  const notes = document.getElementById('release-notes');
-  const directApk = document.getElementById('direct-apk');
 
-  async function fetchRelease() {
-    // Try local JSON first
-    try {
-      const resp = await fetch('/latest-release.json');
-      if (resp.ok) {
-        const data = await resp.json();
-        if (data && data.tag_name) return data;
-      }
-    } catch (e) {}
-    // Fallback to API
-    try {
-      const resp = await fetch(api, {headers:{'Accept':'application/vnd.github+json'}});
-      if (resp.ok) return await resp.json();
-    } catch (e) {}
-    return null;
-  }
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="brand"><img src="./assets/app_icon.png" width="512" height="512" alt=""/> VESPER</div>
+        <p class="muted small">IPTV player for Android TV.<br/>Bring your own authorised sources.</p>
+        <p class="small muted footer-contact">Contact: <a href="mailto:vesper_player@proton.me">vesper_player@proton.me</a></p>
+      </div>
+      <div><h4>Product</h4><a href="#features">Features</a><a href="#screenshots">Screenshots</a><a href="#download">Download</a><a href="./changelog.html">Changelog</a></div>
+      <div><h4>Legal</h4><a href="./privacy.html">Privacy</a><a href="./terms.html">Terms</a></div>
+      <div><h4>Support</h4><a href="https://github.com/R766746/vesper-website/issues" target="_blank" rel="noopener noreferrer">Report an issue</a><a href="./changelog.html">Release status</a></div>
+    </div>
+    <div class="copy"><span>© 2026 Vesper</span><span>Package: com.nova.iptv</span></div>
+  </div>
+</footer>
 
-  const data = await fetchRelease();
-  if(!data || !data.tag_name){ 
-    verEl.textContent = "No release available yet";
-    notes.textContent = "No public release found. A verified APK must be uploaded manually by the maintainer.";
-    return;
-  }
-  const tag = data.tag_name;
-  const assets = data.assets || [];
-  const apk = assets.find(a => a.name === 'app-release.apk') || null;
-  if(blockedTags.has(tag)){
-    verEl.textContent = `${tag} withdrawn`;
-    dlVer.textContent = "pending";
-    notes.textContent = "The previous APK was withdrawn because it contained the old NOVA build. A verified Vesper release will be uploaded manually.";
-    return;
-  }
-  verEl.textContent = `${tag} • ${new Date(data.published_at).toLocaleDateString()}`;
-  dlVer.textContent = tag.replace(/^v/,'');
-  if(apk){
-    dlBtn.href = apk.browser_download_url;
-    heroDl.href = apk.browser_download_url;
-    dlBtn.target = '_blank';
-    heroDl.target = '_blank';
-    dlBtn.removeAttribute('aria-disabled');
-    heroDl.removeAttribute('aria-disabled');
-    dlBtn.removeAttribute('style');
-    heroDl.removeAttribute('style');
-    dlBtn.textContent = '⬇ Download latest APK';
-    heroDl.textContent = '⬇ Download APK';
-    directApk.textContent = `https://github.com/${repo}/releases/latest/download/app-release.apk`;
-    notes.innerHTML = `Latest: <b>${tag}</b> • ${apk.name} • ${(apk.size/1024/1024).toFixed(1)} MB • <a href="${data.html_url}" target="_blank" rel="noopener noreferrer">Notes</a>`;
-  } else {
-    notes.innerHTML = `Tag <b>${tag}</b> has no verified <code>app-release.apk</code> asset — see <a href="${data.html_url}" target="_blank" rel="noopener noreferrer">release</a>.`;
-  }
-})();
-</script>
+<script src="./assets/site.js" defer></script>
 </body>
 </html>

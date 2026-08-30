@@ -5,35 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Vesper — Privacy policy</title>
   <meta name="description" content="Vesper IPTV Player privacy policy — data stays on device, no account system."/>
+  <meta name="referrer" content="strict-origin-when-cross-origin"/>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; script-src 'self'; style-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests"/>
+  <link rel="canonical" href="https://r766746.github.io/vesper-website/privacy.html"/>
   <link rel="icon" href="./assets/app_icon.png"/>
   <link rel="stylesheet" href="./assets/style.css"/>
-  <style>
-    .prose{max-width:760px; margin:0 auto; padding:32px 24px 72px}
-    .prose h1{font-size:36px; margin:12px 0 8px}
-    .prose h2{font-size:20px; margin:28px 0 10px}
-    .prose p, .prose li{color:#C8C2B6; font-size:15px}
-    .prose ul{padding-left:20px}
-    .prose .muted{color:#9A9286}
-    .back{display:inline-flex; gap:8px; align-items:center; margin-bottom:18px}
-  </style>
 </head>
 <body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
 <header class="header">
   <div class="container header-inner">
-    <a class="brand" href="./"><img src="./assets/app_icon.png" alt=""/> VESPER</a>
-    <nav class="nav" id="nav">
+    <a class="brand" href="./" aria-label="Vesper home"><img src="./assets/app_icon.png" width="512" height="512" alt=""/> VESPER</a>
+    <nav class="nav" id="nav" aria-label="Primary navigation">
       <a href="./#features">Features</a>
       <a href="./#download">Download</a>
       <a href="./changelog.html">Changelog</a>
-      <a href="./privacy.html" style="color:var(--text)">Privacy</a>
+      <a href="./privacy.html" class="current-link" aria-current="page">Privacy</a>
       <a href="./terms.html">Terms</a>
-      <a href="https://github.com/R766746/vesper-website" target="_blank">GitHub</a>
+      <a href="https://github.com/R766746/vesper-website" target="_blank" rel="noopener noreferrer">GitHub</a>
     </nav>
-    <button class="mobile-toggle" onclick="document.getElementById('nav').classList.toggle('open')">Menu</button>
+    <button class="mobile-toggle" type="button" aria-label="Open navigation" aria-controls="nav" aria-expanded="false">Menu</button>
   </div>
 </header>
 
-<div class="prose">
+<main id="main-content" class="prose">
   <a class="back small" href="./">← Back to home</a>
   <div class="kicker">Privacy • last updated 25 August 2026</div>
   <h1>Privacy policy</h1>
@@ -93,18 +88,19 @@
   <h2>Changes</h2>
   <p>We will date this page when the policy changes. Keep using the app only if you accept the current version. For questions: <a href="mailto:vesper_player@proton.me">vesper_player@proton.me</a></p>
 
-  <div style="margin-top:32px; padding-top:20px; border-top:1px solid var(--border)" class="small muted">
+  <div class="legal-note small muted">
     Vesper is a player only and does not provide IPTV content. You are responsible for every stream URL you add.
   </div>
-</div>
+</main>
 
 <footer class="footer">
   <div class="container">
-    <div class="copy" style="margin-top:0">
+    <div class="copy compact">
       <span>© 2026 Vesper • <a href="./">Home</a> • <a href="./terms.html">Terms</a> • <a href="./changelog.html">Changelog</a></span>
       <span><a href="mailto:vesper_player@proton.me">vesper_player@proton.me</a></span>
     </div>
   </div>
 </footer>
+<script src="./assets/site.js" defer></script>
 </body>
 </html>
