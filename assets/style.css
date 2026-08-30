@@ -6,7 +6,7 @@
   --card-2:#221F2F;
   --text:#F4F0E8;
   --muted:#9A9286;
-  --muted-2:#6B6560;
+  --muted-2:#8B847B;
   --gold:#C9A36A;
   --gold-2:#E8C99A;
   --gold-soft:rgba(201,163,106,0.12);
@@ -232,6 +232,7 @@ button:focus-visible {
 .prose h1{font-size:36px; margin:12px 0 8px}
 .prose h2{font-size:20px; margin:28px 0 10px}
 .prose p, .prose li{color:#C8C2B6; font-size:15px}
+.prose p a, .prose li a{text-decoration:underline; text-underline-offset:3px}
 .prose ul{padding-left:20px}
 .prose .muted{color:var(--muted)}
 .back{display:inline-flex; gap:8px; align-items:center; margin-bottom:18px}
