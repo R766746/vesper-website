@@ -51,7 +51,13 @@ img{max-width:100%; display:block}
   background:var(--gold); color:#121017; border-color:var(--gold);
   box-shadow:0 8px 24px rgba(201,163,106,0.25);
 }
-.btn-primary:hover{background:var(--gold-2); transform:translateY(-1px)}
+.btn:focus-visible,
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
 .btn-ghost{
   background:transparent; color:var(--text); border-color:var(--border);
 }
