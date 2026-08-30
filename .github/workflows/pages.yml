@@ -15,6 +15,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Fetch latest release
+        run: |
+          curl -s -H "Accept: application/vnd.github+json" \
+            https://api.github.com/repos/R766746/vesper-website/releases/latest \
+            > latest-release.json || echo '{}' > latest-release.json
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
