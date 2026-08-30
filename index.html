@@ -27,7 +27,7 @@
       <a href="https://github.com/R766746/vesper-website" target="_blank">GitHub</a>
       <a class="btn btn-primary" href="#download" style="padding:8px 16px">Get APK</a>
     </nav>
-    <button class="mobile-toggle" onclick="document.getElementById('nav').classList.toggle('open')">Menu</button>
+    <button class="mobile-toggle" aria-label="Toggle navigation" onclick="document.getElementById('nav').classList.toggle('open')">Menu</button>
   </div>
 </header>
 <main>
@@ -38,11 +38,11 @@
         <h1>VESPER <span>A player.<br/>Not a provider.</span></h1>
         <p class="lead">The effortless 10-foot IPTV player for Android TV. It does not provide channels, movies, or series — you add your own M3U, local file, or Xtream portal. TiviMate-style three-pane Home, full-screen EPG, catch-up, and local PVR.</p>
         <div class="hero-actions">
-          <a id="hero-dl" class="btn btn-primary btn-lg" href="https://github.com/R766746/vesper-website/releases/latest" target="_blank">⬇ Download APK</a>
+          <a id="hero-dl" class="btn btn-primary btn-lg" href="#download" aria-disabled="true" style="pointer-events:none; opacity:.55">Download temporarily unavailable</a>
           <a class="btn btn-ghost btn-lg" href="#features">Explore features</a>
         </div>
-        <div class="hero-meta"><span><strong>1.0.0</strong> • minSdk 26 • target 35</span><span>• No account • Data stays on TV</span><span>• <span id="latest-version">Checking latest…</span></span></div>
-        <div style="margin-top:18px" class="small muted"><strong style="color:var(--gold)">IMPORTANT!</strong> Vesper is a media player only. Main app source is private at <code>R766746/NovaIptv</code> — this public repo hosts only website + APK releases.</div>
+        <div class="hero-meta"><span><strong>Release pending</strong> • minSdk 26 • target 35</span><span>• No account • Data stays on TV</span><span>• <span id="latest-version">Checking latest…</span></span></div>
+        <div style="margin-top:18px" class="small muted"><strong style="color:var(--gold)">IMPORTANT!</strong> Vesper is a media player only. This public repository hosts the website and manually verified APK releases; the Android source remains private.</div>
       </div>
       <div class="hero-visual"><div class="badge-live">● Public Website • APKs via Releases</div><img src="./assets/feature.png" alt="Vesper feature graphic"/></div>
     </div>
@@ -66,44 +66,60 @@
         <div class="screen"><img src="./screenshots/screenshot_04_player.png" alt="Player" loading="lazy"/><div class="cap"><b>Player</b><span>ExoPlayer • Subtitles</span></div></div>
       </div></div></section>
   <section id="download" class="section"><div class="container"><div class="kicker">Download • Public repo</div><h2>Install Vesper on your Android TV</h2><p class="sub">APKs are hosted in this public repo's Releases.</p><div class="download-box"><div>
-          <h3>Get the latest APK</h3><p class="muted">Package <code>com.nova.iptv</code> • Version <span id="dl-version">1.0.0</span></p>
+          <h3>Get the latest APK</h3><p class="muted">Package <code>com.nova.iptv</code> • Version <span id="dl-version">pending</span></p>
           <div class="dl-meta"><span>✓ No ads • No IAP</span><span>✓ Public APK hosting</span><span>✓ <a href="./changelog.html">Changelog</a></span></div>
-          <div class="dl-actions"><a id="dl-btn" class="btn btn-primary btn-lg" href="https://github.com/R766746/vesper-website/releases/latest" target="_blank">⬇ Download latest APK</a><a class="btn btn-ghost" href="https://github.com/R766746/vesper-website/releases" target="_blank">All releases</a></div>
-          <div style="margin-top:18px" class="code-box"><div><b>Downloader app on TV:</b></div><div style="margin-top:8px">URL: <code>https://r766746.github.io/vesper-website/</code></div><div>Direct APK: <code>https://github.com/R766746/vesper-website/releases/latest/download/app-release.apk</code></div></div>
+          <div class="dl-actions"><a id="dl-btn" class="btn btn-primary btn-lg" href="#download" aria-disabled="true" style="pointer-events:none; opacity:.55">Download temporarily unavailable</a><a class="btn btn-ghost" href="https://github.com/R766746/vesper-website/releases" target="_blank">Release history</a></div>
+          <div style="margin-top:18px" class="code-box"><div><b>Downloader app on TV:</b></div><div style="margin-top:8px">URL: <code>https://r766746.github.io/vesper-website/</code></div><div>Direct APK: <code id="direct-apk">Unavailable until a verified release is published</code></div></div>
           <div style="margin-top:16px" class="small muted"><div id="release-notes">Fetching latest release info…</div></div>
         </div><div><div class="code-box" style="background:var(--card)"><b>How to sideload:</b><ol style="margin:10px 0 0 18px; padding:0; line-height:1.7" class="muted"><li>TV Settings → Security → Unknown sources → Allow Downloader</li><li>Open Downloader, enter <code>r766746.github.io/vesper-website</code></li><li>Download APK → Install</li><li>Open Vesper → Add Playlist</li></ol><div style="margin-top:14px"><b>Update:</b> Install new APK over old — data stays if same signing key.</div><div style="margin-top:12px"><b>ADB:</b><br/><code>adb connect &lt;tv-ip&gt;<br/>adb install -r app-release.apk</code></div></div></div></div></div></section>
-  <section class="section section-alt"><div class="container"><div class="kicker">FAQ • Legal</div><h2>A player. Not a provider.</h2><div class="faq"><div class="faq-item"><h4>Does Vesper include channels?</h4><p>No. First launch is Add Playlist only.</p></div><div class="faq-item"><h4>Why two repos?</h4><p>App source <code>R766746/NovaIptv</code> is private. This public repo <code>vesper-website</code> hosts only website + APK releases.</p></div><div class="faq-item"><h4>How do APKs get to public repo?</h4><p>Private repo CI builds APKs on tag <code>v*</code>, then pushes to public repo Releases using PAT <code>PUBLIC_REPO_PAT</code>.</p></div></div></div></section>
+  <section class="section section-alt"><div class="container"><div class="kicker">FAQ • Legal</div><h2>A player. Not a provider.</h2><div class="faq"><div class="faq-item"><h4>Does Vesper include channels?</h4><p>No. First launch is Add Playlist only.</p></div><div class="faq-item"><h4>Why two repos?</h4><p>The Android source is private. This public <code>vesper-website</code> repository hosts only the website and APK releases.</p></div><div class="faq-item"><h4>How are APKs published?</h4><p>Each signed Vesper APK is checked locally, then manually uploaded to this repository's GitHub Releases page.</p></div></div></div></section>
 </main>
-<footer class="footer"><div class="container"><div class="footer-grid"><div><div class="brand"><img src="./assets/app_icon.png" alt=""/> VESPER</div><p class="muted small">10-foot IPTV player for Android TV.<br/>A player. Not a provider.<br/>com.nova.iptv</p><p class="small muted" style="margin-top:12px">Contact: <a href="mailto:vesper_player@proton.me">vesper_player@proton.me</a></p></div><div><h5>Product</h5><a href="#features">Features</a><a href="#screenshots">Screenshots</a><a href="#download">Download</a><a href="./changelog.html">Changelog</a></div><div><h5>Legal</h5><a href="./privacy.html">Privacy</a><a href="./terms.html">Terms</a></div><div><h5>Public site repo</h5><a href="https://github.com/R766746/vesper-website/issues">Issues</a><a href="https://github.com/R766746/vesper-website/releases">Releases</a><a href="https://github.com/R766746/vesper-website/actions">Actions</a></div></div><div class="copy"><span>© 2026 Vesper • Public site: r766746.github.io/vesper-website • Private app: R766746/NovaIptv</span><span>Not affiliated with TiviMate.</span></div></div></footer>
+<footer class="footer"><div class="container"><div class="footer-grid"><div><div class="brand"><img src="./assets/app_icon.png" alt=""/> VESPER</div><p class="muted small">10-foot IPTV player for Android TV.<br/>A player. Not a provider.<br/>com.nova.iptv</p><p class="small muted" style="margin-top:12px">Contact: <a href="mailto:vesper_player@proton.me">vesper_player@proton.me</a></p></div><div><h5>Product</h5><a href="#features">Features</a><a href="#screenshots">Screenshots</a><a href="#download">Download</a><a href="./changelog.html">Changelog</a></div><div><h5>Legal</h5><a href="./privacy.html">Privacy</a><a href="./terms.html">Terms</a></div><div><h5>Public site repo</h5><a href="https://github.com/R766746/vesper-website/issues">Issues</a><a href="https://github.com/R766746/vesper-website/releases">Releases</a><a href="https://github.com/R766746/vesper-website/actions">Actions</a></div></div><div class="copy"><span>© 2026 Vesper • Public site: r766746.github.io/vesper-website</span><span>Not affiliated with TiviMate.</span></div></div></footer>
 <script>
 (function(){
   const repo = "R766746/vesper-website";
   const api = `https://api.github.com/repos/${repo}/releases/latest`;
+  const blockedTags = new Set(["v1.0.0", "v1.0.1"]);
   const dlBtn = document.getElementById('dl-btn');
   const heroDl = document.getElementById('hero-dl');
   const verEl = document.getElementById('latest-version');
   const dlVer = document.getElementById('dl-version');
   const notes = document.getElementById('release-notes');
+  const directApk = document.getElementById('direct-apk');
   fetch(api, {headers:{'Accept':'application/vnd.github+json'}})
     .then(r => r.ok ? r.json() : null)
     .then(data => {
       if(!data || !data.tag_name){ 
-        verEl.textContent = "No release yet — push tag v* in private repo";
-        notes.textContent = "No public release found. Private repo CI will copy APKs here after you set PUBLIC_REPO_PAT secret.";
+        verEl.textContent = "No release available yet";
+        notes.textContent = "No public release found. A verified APK must be uploaded manually by the maintainer.";
         return;
       }
       const tag = data.tag_name;
       const assets = data.assets || [];
-      const apk = assets.find(a => a.name.toLowerCase().includes('release') && a.name.endsWith('.apk')) || assets.find(a => a.name.endsWith('.apk')) || null;
-      const url = apk ? apk.browser_download_url : data.html_url;
+      const apk = assets.find(a => a.name === 'app-release.apk') || null;
+      if(blockedTags.has(tag)){
+        verEl.textContent = `${tag} withdrawn`;
+        dlVer.textContent = "pending";
+        notes.textContent = "The previous APK was withdrawn because it contained the old NOVA build. A verified Vesper release will be uploaded manually.";
+        return;
+      }
       verEl.textContent = `${tag} • ${new Date(data.published_at).toLocaleDateString()}`;
       dlVer.textContent = tag.replace(/^v/,'');
       if(apk){
-        dlBtn.href = url;
-        heroDl.href = url;
+        dlBtn.href = apk.browser_download_url;
+        heroDl.href = apk.browser_download_url;
+        dlBtn.target = '_blank';
+        heroDl.target = '_blank';
+        dlBtn.removeAttribute('aria-disabled');
+        heroDl.removeAttribute('aria-disabled');
+        dlBtn.removeAttribute('style');
+        heroDl.removeAttribute('style');
+        dlBtn.textContent = '⬇ Download latest APK';
+        heroDl.textContent = '⬇ Download APK';
+        directApk.textContent = `https://github.com/${repo}/releases/latest/download/app-release.apk`;
         notes.innerHTML = `Latest: <b>${tag}</b> • ${apk.name} • ${(apk.size/1024/1024).toFixed(1)} MB • <a href="${data.html_url}" target="_blank">Notes</a>`;
       } else {
-        notes.innerHTML = `Tag <b>${tag}</b> no APK — see <a href="${data.html_url}">release</a>.`;
+        notes.innerHTML = `Tag <b>${tag}</b> has no verified <code>app-release.apk</code> asset — see <a href="${data.html_url}">release</a>.`;
       }
     })
     .catch(()=>{
