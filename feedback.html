@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Send feedback — Vesper</title>
+  <meta name="description" content="Send app feedback, a bug report, or a feature request to the Vesper team."/>
+  <meta name="referrer" content="strict-origin-when-cross-origin"/>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; script-src 'self'; style-src 'self'; connect-src 'self'; base-uri 'self'; form-action https://formsubmit.co; upgrade-insecure-requests"/>
+  <link rel="canonical" href="https://r766746.github.io/vesper-website/feedback.html"/>
+  <link rel="icon" href="./assets/app_icon.png"/>
+  <link rel="stylesheet" href="./assets/style.css"/>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<header class="header">
+  <div class="container header-inner">
+    <a class="brand" href="./" aria-label="Vesper home"><img src="./assets/app_icon.png" width="512" height="512" alt=""/> VESPER</a>
+    <nav class="nav" id="nav" aria-label="Primary navigation">
+      <a href="./#features">Features</a>
+      <a href="./#download">Download</a>
+      <a href="./changelog.html">Changelog</a>
+      <a href="./feedback.html" class="current-link" aria-current="page">Feedback</a>
+      <a href="./privacy.html">Privacy</a>
+      <a href="./terms.html">Terms</a>
+    </nav>
+    <button class="mobile-toggle" type="button" aria-label="Open navigation" aria-controls="nav" aria-expanded="false">Menu</button>
+  </div>
+</header>
+
+<main id="main-content" class="prose feedback-page">
+  <a class="back small" href="./">← Back to home</a>
+  <div class="kicker">Help shape Vesper</div>
+  <h1>Send feedback</h1>
+  <p class="muted feedback-intro">Tell us what happened or what would make Vesper better. You can attach a screenshot, short video, or log file. Your feedback is sent to the Vesper support email.</p>
+
+  <form class="feedback-form" action="https://formsubmit.co/vesper_player@proton.me" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="_subject" value="New Vesper feedback"/>
+    <input type="hidden" name="_template" value="table"/>
+    <input type="hidden" name="_next" value="https://r766746.github.io/vesper-website/feedback-thanks.html"/>
+    <label class="honeypot">Leave this field empty<input type="text" name="_honey" tabindex="-1" autocomplete="off"/></label>
+
+    <div class="feedback-grid">
+      <div class="form-field">
+        <label for="name">Name <span class="muted">(optional)</span></label>
+        <input id="name" name="name" type="text" autocomplete="name" maxlength="100"/>
+      </div>
+      <div class="form-field">
+        <label for="email">Email <span class="muted">(optional)</span></label>
+        <input id="email" name="email" type="email" autocomplete="email" maxlength="254" aria-describedby="email-help"/>
+        <p id="email-help" class="form-help">Include this if you would like a reply.</p>
+      </div>
+      <div class="form-field">
+        <label for="type">Feedback type</label>
+        <select id="type" name="feedback_type" required>
+          <option value="Bug report">Bug report</option>
+          <option value="Playback issue">Playback issue</option>
+          <option value="Feature request">Feature request</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      <div class="form-field">
+        <label for="version">Vesper version <span class="muted">(optional)</span></label>
+        <input id="version" name="app_version" type="text" placeholder="Example: 1.0.4" maxlength="40"/>
+      </div>
+    </div>
+
+    <div class="form-field">
+      <label for="device">TV or device <span class="muted">(optional)</span></label>
+      <input id="device" name="device" type="text" placeholder="Example: Chromecast with Google TV" maxlength="160"/>
+    </div>
+    <div class="form-field">
+      <label for="message">What would you like us to know?</label>
+      <textarea id="message" name="message" required maxlength="6000" placeholder="For a bug, include what you were doing, what you expected, and what happened."></textarea>
+    </div>
+    <div class="form-field">
+      <label for="attachment">Attachment <span class="muted">(optional)</span></label>
+      <input id="attachment" name="attachment" type="file" accept="image/*,video/*,.txt,.log,.json,.zip" aria-describedby="attachment-help"/>
+      <p id="attachment-help" class="form-help">Maximum 10 MB total. Never attach playlist credentials, provider tokens, or passwords.</p>
+    </div>
+    <div class="feedback-actions">
+      <button class="btn btn-primary" type="submit">Send feedback</button>
+      <p class="form-help">Submitting uses FormSubmit as an email relay. See our <a href="./privacy.html">privacy policy</a>.</p>
+    </div>
+  </form>
+</main>
+
+<footer class="footer">
+  <div class="container"><div class="copy compact"><span>© 2026 Vesper • <a href="./">Home</a> • <a href="./privacy.html">Privacy</a> • <a href="./terms.html">Terms</a></span><span><a href="mailto:vesper_player@proton.me">vesper_player@proton.me</a></span></div></div>
+</footer>
+<script src="./assets/site.js" defer></script>
+</body>
+</html>
