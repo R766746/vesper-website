@@ -5,7 +5,7 @@
 - [ ] Build from the exact approved Android commit with a clean working tree.
 - [ ] Increase `versionCode`; make `versionName` match the GitHub tag.
 - [ ] Build with the protected production keystore—not the Android debug key.
-- [ ] Verify package `com.nova.iptv`, app label `Vesper`, version, and signer certificate.
+- [ ] Verify package `studio.vesper.player`, app label `Vesper`, version, and signer certificate.
 - [ ] Install the release APK over the previous production-signed version on a TV device.
 - [ ] Run the Android unit tests and minified release build.
 - [ ] Generate `SHA256SUMS.txt` from the final, unchanged APK.

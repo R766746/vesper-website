@@ -31,7 +31,10 @@
 
   const repo = 'R766746/vesper-website';
   const apiUrl = `https://api.github.com/repos/${repo}/releases/latest`;
-  const withdrawnTags = new Set(['v1.0.0', 'v1.0.1']);
+  // Releases through v1.0.4 use the retired com.nova.iptv test identity.
+  // Keep public downloads paused until a verified studio.vesper.player build
+  // is deliberately published under a newer tag.
+  const retiredPackageTags = new Set(['v1.0.0', 'v1.0.1', 'v1.0.2', 'v1.0.3', 'v1.0.4']);
   const versionLabel = document.getElementById('latest-version');
   const downloadVersion = document.getElementById('dl-version');
   const releaseStatus = document.getElementById('release-notes');
@@ -92,14 +95,14 @@
     const tag = release.tag_name;
     const apk = assetNamed(release, 'app-release.apk');
     const checksum = assetNamed(release, 'SHA256SUMS.txt');
-    const isWithdrawn = withdrawnTags.has(tag);
-    const isEligible = !release.draft && !release.prerelease && !isWithdrawn && Boolean(apk);
+    const isRetiredPackage = retiredPackageTags.has(tag);
+    const isEligible = !release.draft && !release.prerelease && !isRetiredPackage && Boolean(apk);
 
     if (!isEligible) {
-      if (versionLabel) versionLabel.textContent = isWithdrawn ? `${tag} withdrawn` : 'Release verification pending';
+      if (versionLabel) versionLabel.textContent = isRetiredPackage ? 'New Play package pending' : 'Release verification pending';
       if (downloadVersion) downloadVersion.textContent = 'pending';
-      setStatus(isWithdrawn
-        ? 'The previous release was withdrawn. Download remains disabled until a corrected production build is verified.'
+      setStatus(isRetiredPackage
+        ? 'Legacy-package downloads are retired. Download remains disabled until a studio.vesper.player build is verified.'
         : 'The newest release does not contain a verified production APK.');
       return;
     }

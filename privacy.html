@@ -4,7 +4,7 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Vesper — Privacy policy</title>
-  <meta name="description" content="Vesper IPTV Player privacy policy — data stays on device, no account system."/>
+  <meta name="description" content="Vesper IPTV Player privacy policy — on-device data, optional services, and subscription processing."/>
   <meta name="referrer" content="strict-origin-when-cross-origin"/>
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; script-src 'self'; style-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests"/>
   <link rel="canonical" href="https://r766746.github.io/vesper-website/privacy.html"/>
@@ -31,14 +31,14 @@
 
 <main id="main-content" class="prose">
   <a class="back small" href="./">← Back to home</a>
-  <div class="kicker">Privacy • last updated 3 September 2026</div>
+  <div class="kicker">Privacy • last updated 6 September 2026</div>
   <h1>Privacy policy</h1>
-  <p class="muted">Vesper (package <code>com.nova.iptv</code>) • Contact: <a href="mailto:vesper_player@proton.me">vesper_player@proton.me</a></p>
+  <p class="muted">Vesper (package <code>studio.vesper.player</code>) • Contact: <a href="mailto:play.vesper@gmail.com">play.vesper@gmail.com</a></p>
 
   <p><strong>This is not legal advice.</strong> Vesper is a media <em>player</em>. It does not provide, host, sell, or recommend television channels, playlists, or VOD.</p>
 
   <h2>Who we are</h2>
-  <p>The publisher of the Android TV app Vesper, application id <code>com.nova.iptv</code>. Contact: <a href="mailto:vesper_player@proton.me">vesper_player@proton.me</a>. This site is hosted via GitHub Pages at <code>r766746.github.io/vesper-website</code>.</p>
+  <p>Vesper Digital Studio publishes the Android TV app Vesper, application id <code>studio.vesper.player</code>. Contact: <a href="mailto:play.vesper@gmail.com">play.vesper@gmail.com</a>. This site is hosted via GitHub Pages at <code>r766746.github.io/vesper-website</code>.</p>
 
   <h2>What stays on your TV</h2>
   <ul>
@@ -50,15 +50,20 @@
     <li>Optional OpenSubtitles username and API keys you type in Settings.</li>
     <li>App preferences via Jetpack DataStore.</li>
   </ul>
-  <p>We do not run an account system. We do not receive your playlists. We do not run analytics in v1.</p>
+  <p>We do not run a Vesper account system. We do not receive your playlists. We do not use advertising or behavioural analytics. RevenueCat processes subscription lifecycle events as described below.</p>
 
   <h2>What leaves the device</h2>
   <p>Network traffic goes to:</p>
   <ul>
     <li><strong>Hosts you configure</strong> — your IPTV / Xtream / EPG / stream servers, including credentials those URLs contain. If your provider uses HTTP, that traffic is not encrypted (disclosed in Data Safety).</li>
     <li><strong>Optional metadata services</strong> you can leave unused: TMDB, Apple iTunes Search, Wikipedia, TVMaze, OMDb (if you add a key), OpenSubtitles, and YouTube (trailers via official IFrame or YouTube app). Those lookups send titles, TMDB ids, and your IP address to those operators under <em>their</em> policies.</li>
+    <li><strong>Google Play and RevenueCat</strong> — when subscription support is enabled, Google Play processes purchases and RevenueCat processes an anonymous app user identifier, product and purchase identifiers, and subscription status on our behalf to validate Premium access and understand purchase lifecycle events.</li>
   </ul>
-  <p>There is no crash reporter in v1. No ads. No in-app purchases.</p>
+  <p>Purchase validation is required to provide paid features and is not processed only ephemerally. It is used for app functionality and subscription analytics and is encrypted in transit. Vesper does not receive or store your payment-card details. Google Play and RevenueCat process data under <a href="https://policies.google.com/privacy">Google's Privacy Policy</a> and <a href="https://www.revenuecat.com/privacy/">RevenueCat's Privacy Policy</a>.</p>
+  <p>There is no third-party crash reporter in v1. Vesper contains no ads.</p>
+
+  <h2>Subscriptions</h2>
+  <p>Vesper may offer optional monthly and annual auto-renewing subscriptions through Google Play. Any trial eligibility, trial duration, recurring price, billing interval, and renewal terms are shown by Google Play before purchase. You can <a href="https://play.google.com/store/account/subscriptions">manage or cancel a subscription in Google Play</a>.</p>
 
   <h2>Website (this GitHub Pages site)</h2>
   <ul>
@@ -76,19 +81,19 @@
 
   <h2>Security</h2>
   <ul>
-    <li>Encrypted in transit: HTTPS to TMDB, iTunes, Wikipedia, TVMaze, OMDb, OpenSubtitles, YouTube.</li>
+    <li>Encrypted in transit: HTTPS to metadata services, Google Play, and RevenueCat.</li>
     <li>Your IPTV hosts may be HTTP — that is controlled by your provider, not Vesper.</li>
     <li>Keystore-backed vault for passwords where device supports it.</li>
   </ul>
 
   <h2>Deletion</h2>
-  <p>Uninstall the app, or delete a playlist in Settings, to remove that library from the device. Recordings in a folder you picked stay until you delete them via file manager. No server copy exists to delete — we don't have your data.</p>
+  <p>Uninstall the app, or delete a playlist in Settings, to remove that library from the device. Recordings in a folder you picked stay until you delete them via file manager. To request deletion of Vesper's RevenueCat customer record, email <a href="mailto:play.vesper@gmail.com">play.vesper@gmail.com</a>. We may ask for a purchase or anonymous app user identifier so we can locate the correct record. Google Play purchase records are controlled by Google under its own retention obligations. Deleting app data or uninstalling Vesper does not cancel an active subscription.</p>
 
   <h2>Data Safety (Play Console summary)</h2>
-  <p>No data is collected by the developer; data stored on device is sent to the user-configured provider when playing or importing. Optional third-party sharing for artwork, trailers, and subtitles is listed above.</p>
+  <p>Most Vesper library data stays on the device. When subscription support is enabled, purchase history is collected through Google Play Billing and RevenueCat for app functionality and subscription analytics. RevenueCat acts as a service provider. Optional provider, artwork, trailer, subtitle, website, and feedback processing is described above.</p>
 
   <h2>Changes</h2>
-  <p>We will date this page when the policy changes. Keep using the app only if you accept the current version. For questions: <a href="mailto:vesper_player@proton.me">vesper_player@proton.me</a></p>
+  <p>We will date this page when the policy changes. Keep using the app only if you accept the current version. For questions: <a href="mailto:play.vesper@gmail.com">play.vesper@gmail.com</a></p>
 
   <div class="legal-note small muted">
     Vesper is a player only and does not provide IPTV content. You are responsible for every stream URL you add.
@@ -99,7 +104,7 @@
   <div class="container">
     <div class="copy compact">
       <span>© 2026 Vesper • <a href="./">Home</a> • <a href="./terms.html">Terms</a> • <a href="./changelog.html">Changelog</a></span>
-      <span><a href="mailto:vesper_player@proton.me">vesper_player@proton.me</a></span>
+      <span><a href="mailto:play.vesper@gmail.com">play.vesper@gmail.com</a></span>
     </div>
   </div>
 </footer>
