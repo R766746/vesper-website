@@ -29,4 +29,4 @@ The HTML pages include a restrictive CSP and referrer policy through `<meta>` el
 
 Repository Settings → Pages → Source: **GitHub Actions**.
 
-Contact: play.vesper@gmail.com
+Contact: vesper_player@proton.me
