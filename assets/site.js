@@ -94,7 +94,7 @@
 
     const tag = release.tag_name;
     const apk = assetNamed(release, 'app-release.apk');
-    const checksum = assetNamed(release, 'SHA256SUMS.txt');
+    const checksum = assetNamed(release, 'app-release.apk.sha256') || assetNamed(release, 'SHA256SUMS.txt');
     const isRetiredPackage = retiredPackageTags.has(tag);
     const isEligible = !release.draft && !release.prerelease && !isRetiredPackage && Boolean(apk);
 
