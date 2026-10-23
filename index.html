@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Vesper — IPTV Player for Android TV</title>
-  <meta name="description" content="Vesper is a privacy-first IPTV player for Android TV. Bring your own authorised M3U, local file, or Xtream-compatible service."/>
+  <title>Vesper — IPTV Player for Android TV &amp; Mobile</title>
+  <meta name="description" content="Vesper is a privacy-first IPTV player for Android TV and Android mobile devices. Bring your own authorised M3U, local file, or Xtream-compatible service."/>
   <meta name="referrer" content="strict-origin-when-cross-origin"/>
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; script-src 'self'; style-src 'self'; connect-src 'self' https://api.github.com; base-uri 'self'; form-action 'none'; upgrade-insecure-requests"/>
   <link rel="canonical" href="https://r766746.github.io/vesper-website/"/>
-  <meta property="og:title" content="Vesper — IPTV Player for Android TV"/>
+  <meta property="og:title" content="Vesper — IPTV Player for Android TV &amp; Mobile"/>
   <meta property="og:description" content="A fast, privacy-first player built for the couch. Bring your own authorised sources."/>
   <meta property="og:image" content="https://r766746.github.io/vesper-website/assets/feature.png"/>
   <meta property="og:image:width" content="1024"/>
@@ -16,7 +16,7 @@
   <meta property="og:url" content="https://r766746.github.io/vesper-website/"/>
   <meta property="og:type" content="website"/>
   <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:title" content="Vesper — IPTV Player for Android TV"/>
+  <meta name="twitter:title" content="Vesper — IPTV Player for Android TV &amp; Mobile"/>
   <meta name="twitter:description" content="A fast, privacy-first player built for the couch."/>
   <meta name="twitter:image" content="https://r766746.github.io/vesper-website/assets/feature.png"/>
   <meta name="theme-color" content="#08070C"/>
@@ -50,12 +50,13 @@
   <section class="hero">
     <div class="container hero-grid">
       <div>
-        <div class="kicker">Android TV • D-pad native • Privacy first</div>
+        <div class="kicker">Android TV &amp; Mobile • D-pad &amp; Touch • Privacy first</div>
         <h1>VESPER <span>A player.<br/>Not a provider.</span></h1>
-        <p class="lead">A focused 10-foot player for Android TV. Add your own authorised M3U, local file, or Xtream-compatible service and enjoy fast navigation, EPG, catch-up, multi-view, and local recording.</p>
+        <p class="lead">A focused, privacy-first player for Android TV, Google TV, and Android phones. Add your own authorised M3U, local file, or Xtream-compatible service and enjoy fast navigation, EPG, catch-up, multi-view, and local recording.</p>
         <div class="hero-actions">
-          <a id="hero-dl" class="btn btn-primary btn-lg is-disabled" aria-disabled="true" tabindex="-1">Verified APK coming soon</a>
-          <a class="btn btn-ghost btn-lg" href="#screenshots">See the experience</a>
+          <a id="hero-dl" class="btn btn-primary btn-lg is-disabled" aria-disabled="true" tabindex="-1">Download Android TV APK</a>
+          <a id="hero-phone-dl" class="btn btn-ghost btn-lg is-disabled" aria-disabled="true" tabindex="-1">Download Phone APK</a>
+          <a class="btn btn-ghost btn-lg" href="#download">All Downloads</a>
         </div>
         <div class="hero-meta">
           <span>Android 8.0+</span>
@@ -117,35 +118,44 @@
   <section id="download" class="section">
     <div class="container">
       <div class="kicker">Verified download</div>
-      <h2>Install Vesper on Android TV</h2>
-      <p class="sub">Production APKs and checksums are published through the official Vesper GitHub Releases page.</p>
+      <h2>Install Vesper on Android TV &amp; Mobile</h2>
+      <p class="sub">Production-signed APKs and checksums for Android TV, Google TV, and handheld Android devices.</p>
       <div class="download-box">
         <div>
-          <h3>Get the latest signed APK</h3>
+          <h3>Get the latest signed APKs</h3>
           <p class="muted">Package <code>studio.vesper.player</code> • Version <span id="dl-version">pending</span></p>
-          <div class="dl-meta"><span>✓ Production-signed</span><span>✓ SHA-256 checksum</span><span>✓ <a href="./changelog.html">Release notes</a></span></div>
+          <div class="dl-meta"><span>✓ Production-signed</span><span>✓ SHA-256 checksums</span><span>✓ <a href="./changelog.html">Release notes</a></span></div>
           <div class="dl-actions">
-            <a id="dl-btn" class="btn btn-primary btn-lg is-disabled" aria-disabled="true" tabindex="-1">Verified APK coming soon</a>
-            <a id="release-history-link" class="btn btn-ghost" href="./changelog.html">Release status</a>
+            <a id="dl-tv-btn" class="btn btn-primary btn-lg is-disabled" aria-disabled="true" tabindex="-1">Download Android TV APK</a>
+            <a id="dl-phone-btn" class="btn btn-primary btn-lg is-disabled" aria-disabled="true" tabindex="-1">Download Phone &amp; Tablet APK</a>
+            <a id="release-history-link" class="btn btn-ghost" href="./changelog.html">Release notes</a>
           </div>
           <div class="code-box download-details">
-            <div><b>Downloader app on TV</b></div>
-            <div class="detail-row">Site: <code>r766746.github.io/vesper-website</code></div>
-            <div>Direct APK: <code id="direct-apk">Available after verification</code></div>
-            <div>Checksum: <code id="checksum-link">Published with the APK</code></div>
+            <div><b>Direct APK Downloads &amp; Downloader URL</b></div>
+            <div class="detail-row">Site URL: <code>r766746.github.io/vesper-website</code></div>
+            <div>Android TV APK: <code id="direct-tv-apk">Available after verification</code></div>
+            <div>Phone / Tablet APK: <code id="direct-phone-apk">Available after verification</code></div>
+            <div>Checksums: <code id="checksum-link">Published with the APK</code></div>
           </div>
           <div id="release-notes" class="small muted release-status" aria-live="polite">Checking verified release information…</div>
         </div>
         <div class="code-box install-box">
+          <b>Which edition should you choose?</b>
+          <div class="edition-guide">
+            <div class="edition-row"><b>📺 Android TV Edition:</b> Built for 10-foot D-pad navigation on Android TV, Google TV, Fire TV, and streaming boxes. Includes USB and storage access for local M3U playlists and backups.</div>
+            <div><b>📱 Phone &amp; Tablet Edition:</b> Built for handheld touchscreens with touch navigation, swipe gestures, and mobile player controls, adhering to standard Android storage policies.</div>
+          </div>
           <b>How to sideload</b>
           <ol class="install-steps muted">
-            <li>Allow installs from your trusted Downloader or file-manager app.</li>
-            <li>Open this site on the TV and download the production APK.</li>
-            <li>Optionally compare its SHA-256 value with the published checksum.</li>
+            <li><b>TV:</b> Open Downloader or a browser app on your TV, enter the TV APK direct link, and install.</li>
+            <li><b>Phone:</b> Download the Phone APK directly on your device and tap to install.</li>
+            <li>Optionally verify the SHA-256 value with <code>SHA256SUMS.txt</code>.</li>
             <li>Install, open Vesper, and add your authorised source.</li>
           </ol>
-          <div class="install-note"><b>Updates:</b> Future <code>studio.vesper.player</code> builds update in place when the signing certificate matches. Legacy <code>com.nova.iptv</code> test builds are separate installations and their local data does not migrate automatically.</div>
-          <div class="install-note"><b>ADB:</b><br/><code>adb install -r app-release.apk</code></div>
+          <div class="install-note"><b>ADB Commands:</b><br/>
+            <code>adb install -r app-tv-release.apk</code> (TV)<br/>
+            <code>adb install -r app-phone-release.apk</code> (Phone)
+          </div>
         </div>
       </div>
     </div>
@@ -157,7 +167,8 @@
       <h2>A player. Not a content service.</h2>
       <div class="faq">
         <article class="faq-item"><h3>Does Vesper include channels?</h3><p>No. First launch asks you to add your own authorised source.</p></article>
-        <article class="faq-item"><h3>Where is my information stored?</h3><p>Playlist configuration, settings, favourites, and watch history remain on your Android TV unless a feature must contact your provider or an optional metadata service.</p></article>
+        <article class="faq-item"><h3>Which edition should I download?</h3><p>Download the <b>Android TV Edition</b> for smart TVs, Google TV, Fire TV, soundbars, and streaming boxes (built for D-pad remote navigation and direct USB storage access). Download the <b>Phone &amp; Tablet Edition</b> for Android phones and tablets (built for touch gestures and mobile player controls).</p></article>
+        <article class="faq-item"><h3>Where is my information stored?</h3><p>Playlist configuration, settings, favourites, and watch history remain on your Android TV or mobile device unless a feature must contact your provider or an optional metadata service.</p></article>
         <article class="faq-item"><h3>How are downloads verified?</h3><p>Every public APK is checked for package, version, production signature, and SHA-256 checksum before publication.</p></article>
       </div>
     </div>
@@ -169,7 +180,7 @@
     <div class="footer-grid">
       <div>
         <div class="brand"><img src="./assets/app_icon.png" width="512" height="512" alt=""/> VESPER</div>
-        <p class="muted small">IPTV player for Android TV.<br/>Bring your own authorised sources.</p>
+        <p class="muted small">IPTV player for Android TV &amp; Mobile.<br/>Bring your own authorised sources.</p>
         <p class="small muted footer-contact">Contact: <a href="mailto:vesper_player@proton.me">vesper_player@proton.me</a></p>
       </div>
       <div><h4>Product</h4><a href="#features">Features</a><a href="#screenshots">Screenshots</a><a href="#download">Download</a><a href="./changelog.html">Changelog</a></div>

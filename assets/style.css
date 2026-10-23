@@ -206,6 +206,8 @@ button:focus-visible {
 .detail-row{margin-top:8px}
 .release-status{margin-top:16px}
 .install-box{background:var(--card)}
+.edition-guide{margin:10px 0 14px; font-size:13px; line-height:1.6}
+.edition-row{margin-bottom:8px}
 .install-steps{margin:10px 0 0 18px; padding:0; line-height:1.7}
 .install-note{margin-top:14px}
 

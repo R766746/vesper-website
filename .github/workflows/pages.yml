@@ -53,7 +53,7 @@ jobs:
               html_url,
               draft,
               prerelease,
-              assets: [.assets[] | select(.name == "app-release.apk" or .name == "SHA256SUMS.txt") | {
+              assets: [.assets[] | select(.name == "app-tv-release.apk" or .name == "app-phone-release.apk" or .name == "app-release.apk" or .name == "SHA256SUMS.txt") | {
                 name,
                 size,
                 browser_download_url
