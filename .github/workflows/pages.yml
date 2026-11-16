@@ -40,11 +40,16 @@ jobs:
           ref: main
       - name: Fetch latest release
         shell: bash
+        # Authenticated: anonymous API calls from shared runners are often rate-limited (HTTP 403),
+        # which used to publish an empty manifest and disable the download buttons.
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
           if curl -fsSL \
             -H "Accept: application/vnd.github+json" \
             -H "X-GitHub-Api-Version: 2022-11-28" \
+            -H "Authorization: Bearer ${GH_TOKEN}" \
             https://api.github.com/repos/R766746/vesper-website/releases/latest \
             -o release-response.json; then
             jq '{
